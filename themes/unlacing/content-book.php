@@ -35,6 +35,13 @@
 		<?php if ( ! get_post_meta($post->ID, 'buy_from_amazon_link', true) == null ) : ?>
 			<a class="button" href="<?php the_field('buy_from_amazon_link'); ?>" target="_blank">Buy from Amazon</a>
 		<?php endif; ?>
+		<?php if ( ! get_post_meta($post->ID, 'reviews', true) == null ) : ?>
+			<div class="book-reviews">
+				<h2>Reviews</h2>
+				<?php the_field('reviews'); ?>
+			</div>
+		<?php endif; ?>
+
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
