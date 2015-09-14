@@ -51,8 +51,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 @font-face {
 	font-family: 'Margon360-Regular';
-	src: url('/wp-content/themes/unlacing/fonts/2E077E_0_0.eot');
-	src: url('/wp-content/themes/unlacing/fonts/2E077E_0_0.eot?#iefix') format('embedded-opentype'),url('/wp-content/themes/unlacing/fonts/2E077E_0_0.woff2') format('woff2'),url('/wp-content/themes/unlacing/fonts/2E077E_0_0.woff') format('woff'),url('/wp-content/themes/unlacing/fonts/2E077E_0_0.ttf') format('truetype');
+	src: url('fonts/2E077E_0_0.eot');
+	src: url('fonts/2E077E_0_0.eot?#iefix') format('embedded-opentype'),url('fonts/2E077E_0_0.woff2') format('woff2'),url('fonts/2E077E_0_0.woff') format('woff'),url('fonts/2E077E_0_0.ttf') format('truetype');
 }
 
 /*--------------------------------------------------------------
@@ -623,7 +623,7 @@ a:active {
 
 /* Small menu. */
 .menu-toggle {
-	background: url("/wp-content/themes/unlacing/icons/menu.svg") no-repeat;
+	background: url("icons/menu.svg") no-repeat;
 	height: 80px;
 	width: 60px;
 	position: absolute;
@@ -682,7 +682,7 @@ a:active {
 		line-height: 1em;
 	}
 }
-**/
+
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -1168,6 +1168,3 @@ address {
 .page-id-74 .main-navigation li {
 display: none;
 }
-
-Pets Name
-ABLEdILiAnyT
