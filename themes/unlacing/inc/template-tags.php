@@ -105,11 +105,12 @@ function unlacing_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
+		/* Categories are not used on this site for this purpose
 		$categories_list = get_the_category_list( __( ', ', 'unlacing' ) );
 		if ( $categories_list && unlacing_categorized_blog() ) {
 			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'unlacing' ) . '</span>', $categories_list );
 		}
-
+		*/
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'unlacing' ) );
 		if ( $tags_list ) {
