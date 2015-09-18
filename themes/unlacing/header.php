@@ -39,7 +39,20 @@
 			<a href="http://www.twitter.com"><img src="/wp-content/themes/unlacing/icons/social/twitter.svg" alt="twitter"></a>
 			<a href="http://www.linkedin.com"><img src="/wp-content/themes/unlacing/icons/social/linkedin.svg" alt="linkedin"></a>
 		</div><!-- #social -->
-		<div class="banner-quote aligncenter">
+		<?php if ( ! get_field('banner_image') == null ) : ?>
+		<div class="banner-image aligncenter">
+			<?php $image_id = get_field('banner_image');
+			$image = wp_get_attachment_image_src ($image_id, 'thumbnail');?>
+			<img src="<?php echo $image[0]; ?>" />
+		</div><!-- .banner-imagee -->
+		<?php endif; ?>
+		<?php if ( ! get_field('banner_quote') == null ) : ?>
+			<div class="banner-quote">
+				<?php the_field('banner_quote'); ?>
+			</div><!-- .banner-quote -->
+		<?php endif; ?>
+
+		<!--<div class="banner-quote aligncenter">
 			“Jewish scholars call the books of Job, Proverbs, and Ecclesiastes “Wisdom Literature,” because they contain important reflections on the human condition and clarify how people ought to live in God’s world.”<br>
 			<strong>“This is wisdom literature.”</strong><br>
 --Foreword by John Stewart Author-Editor, Bridges Not Walls
