@@ -852,6 +852,11 @@ a:active {
 	text-align: center;
 	font-size: 1.5em;
 }
+
+.banner-image {
+    float: left;
+    margin-right: 1em;
+}
 	
 /*--------------------------------------------------------------
 ## Slideshow
