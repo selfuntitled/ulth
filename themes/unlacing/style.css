@@ -917,14 +917,14 @@ a:active {
 	margin: 0 -5000px;
 	padding: 0 5000px;
 }
-
+/** removed slideshow on homepage
 .home .entry-header,
 .home .entry-content {
 	border: none;
 	margin: 0;
 	padding: 0;
 }
-
+**/
 .button {
 	background: #c46800;
 	background-image: linear-gradient(to bottom, #c46800, #944c00);
