@@ -29,13 +29,13 @@
 				'after'  => '</div>',
 			) );
 		?>
-		<?php if ( ! get_post_meta($post->ID, 'buy_direct_from_henry_link', true) == null ) : ?>
-			<a class="button" href="<?php the_field('buy_direct_from_henry_link'); ?>" target="_blank">Buy direct from Henry</a>
+		<?php if ( ! get_field( 'buy_from_amazon_link') == null ) : ?>
+			<a class="button" href="<?php the_field('buy_from_amazon_link'); ?>" target="_blank">Buy the book</a>
 		<?php endif; ?>
-		<?php if ( ! get_post_meta($post->ID, 'buy_from_amazon_link', true) == null ) : ?>
-			<a class="button" href="<?php the_field('buy_from_amazon_link'); ?>" target="_blank">Buy from Amazon</a>
+		<?php if ( ! get_field( 'buy_direct_wholesale') == null ) : ?>
+			<a class="button" href="<?php the_field('buy_direct_wholesale'); ?>" target="_blank">Buy wholesale</a>
 		<?php endif; ?>
-		<?php if ( ! get_post_meta($post->ID, 'reviews', true) == null ) : ?>
+		<?php if ( ! get_field( 'reviews') == null ) : ?>
 			<div class="book-reviews">
 				<h2>Reviews</h2>
 				<?php the_field('reviews'); ?>

@@ -13,7 +13,10 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 	<div class="featured-image">
-		<?php echo get_the_post_thumbnail( $page->ID, 'full'); ?> 
+		<?php echo get_the_post_thumbnail( $page->ID, 'full'); ?>
+		<?php if ( ! get_field( 'featured_image_caption') == null ) : ?>
+			<?php the_field('featured_image_caption'); ?>
+		<?php endif; ?>
 	</div>
 	<div class="entry-content">
 		<?php the_content(); ?>
