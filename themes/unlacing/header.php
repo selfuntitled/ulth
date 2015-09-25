@@ -24,9 +24,9 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php if (bloginfo( 'description' )) { ?>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			<?php }; ?>
+			<?php if ( get_bloginfo( 'description' ) ) : ?>
+				<h2 class="site-description"><?php echo get_bloginfo( 'description' ); ?></h2>
+			<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
@@ -44,8 +44,11 @@
 			<?php if ( ! get_field('banner_image') == null ) : ?>
 			<div class="banner-image aligncenter">
 				<?php $image_id = get_field('banner_image');
-				$image = wp_get_attachment_image_src ($image_id, 'thumbnail');?>
+				$image = wp_get_attachment_image_src ($image_id, 'bannerthumb');?>
 				<img src="<?php echo $image[0]; ?>" />
+				<?php if ( ! get_field('featured_image_caption') == null ) : ?>
+				<div class="credit"><?php the_field('featured_image_caption');?></div>
+				<?php endif; ?>
 			</div><!-- .banner-imagee -->
 			<?php endif; ?>
 			<?php if ( ! get_field('banner_quote') == null ) : ?>
@@ -55,11 +58,6 @@
 			<?php endif; ?>
 			</div>
 		<?php endif; ?>
-		<!--<div class="banner-quote aligncenter">
-			“Jewish scholars call the books of Job, Proverbs, and Ecclesiastes “Wisdom Literature,” because they contain important reflections on the human condition and clarify how people ought to live in God’s world.”<br>
-			<strong>“This is wisdom literature.”</strong><br>
---Foreword by John Stewart Author-Editor, Bridges Not Walls
-		</div><!-- .banner-quote -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

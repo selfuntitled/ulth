@@ -142,10 +142,11 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'bookcover', 400, 9999, false ); 
+	add_image_size( 'bannerthumb', 250, 250 );
 }
 add_filter('image_size_names_choose', 'custom_image_sizes'); 
 function custom_image_sizes($sizes) { 
-	$addsizes = array( "bookcover" => __( "Book Cover") ); 
+	$addsizes = array( "bookcover" => __( "Book Cover"), "bannerthumb" => __( "Banner Thumb" )); 
 	$newsizes = array_merge($sizes, $addsizes); 
 	return $newsizes; 
 }

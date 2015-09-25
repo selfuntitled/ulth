@@ -13,7 +13,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<address class="site-contact">
-				&copy; <?php echo date("Y") ?> H. Freeman Associates, LLC. | <a mailto="unlacing@hfreemanassociates.com">unlacing@hfreemanassociates.com</a> | 2204 Salisbury Road South Richmond, IN 47374 | <span class="tel">765-373-8409</span>
+				&copy; <?php echo date("Y") ?> H. Freeman Associates, LLC. | <a mailto="henry@unlacingtheheart.com">henry@unlacingtheheart.com</a> | 2204 Salisbury Road South Richmond, IN 47374 | <span class="tel">765-373-8409</span>
 			</address>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
